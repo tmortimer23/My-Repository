@@ -1,0 +1,46 @@
+package Lesson1;
+
+import java.util.Scanner;
+
+public class ComplexCalculator {
+
+	public static void main(String[] args) {
+		
+		double x, y;
+		String operation;
+		
+		Scanner num1 = new Scanner(System.in);
+		System.out.println("Enter first number:");
+		x = num1.nextDouble();
+		
+		Scanner op = new Scanner(System.in);
+		System.out.println("Enter operation:");
+		operation = op.next();
+		
+		Scanner num2 = new Scanner(System.in);
+		System.out.println("Enter second number:");
+		y = num2.nextDouble();
+		
+		if (operation == "+"){
+			System.out.print(x + y);
+		}
+		
+		if (operation == "-"){
+			System.out.print(x-y);
+		}
+		
+		if (operation == "*"){
+			System.out.print(x * y);
+		}
+		
+		if (operation == "/"){
+			System.out.print(x / y);
+		}
+		
+		else {
+			System.out.println("Error");
+		}
+		
+	}
+
+}

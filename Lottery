@@ -8,7 +8,7 @@ public class Lottery {
 	
 	public Lottery() {
 		numbers = new ArrayList<>(6);
-		guesses = new ArrayList<>(5);
+		guesses = new ArrayList<>(6);
 		
 		for (int i = 0; i < numbers.size() - 1; i++) {
 			int num = (int) ((Math.random() * 54) + 5);
@@ -49,7 +49,7 @@ public class Lottery {
 		
 		System.out.println("\nNow time for the Powerball number!");
 		guesses.add(5, scan.nextInt());
-		pbNum = guesses.get(5);
+		pbNum = guesses.get(6);
 	}
 	
 	public void checkGuesses() {

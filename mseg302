@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import interpolate
+
+cycles = np.array([2.00E+05, 1.00E+06, 3.00E+06, 1.00E+07, 
+					3.00E+07, 1.00E+08, 3.00E+08, 1.00E+09])
+stress_amp = np.array([310, 223, 191, 168, 153, 143, 134, 127])
+
+x = np.linspace(cycles.min(), cycles.max(), 50)
+y = np.linspace(stress_amp.min(), stress_amp.max(), 50)
+
+plt.plot(x, y)
+
+plt.xscale('log')
+
+plt.xlabel('Cycles to Failure, N\n(logarithmic scale)')
+plt.ylabel('Stress Amplitude, S')
+
+plt.show()
